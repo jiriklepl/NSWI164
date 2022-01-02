@@ -9,9 +9,6 @@ cradle:
     - path: "src/DSL/Parser.hs"
       component: "NSWI164:exe:NSWI164"
 
-    - path: "src/DSL/Parser/State.hs"
-      component: "NSWI164:exe:NSWI164"
-
     - path: "src/DSL/Parser/Token.hs"
       component: "NSWI164:exe:NSWI164"
 
