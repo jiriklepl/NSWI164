@@ -2,29 +2,32 @@ cabal-version:      2.4
 name:               NSWI164
 version:            0.1.0.0
 
--- A short (one-line) description of the package.
--- synopsis:
+synopsis:           This project implements the term project of NSWI164 at MFF-UK
+description:        This project implements the term project of NSWI164 at MFF-UK.                    
+                    It uses the Megaparsec library for parsing and the Prettyprinter library for printing.
+category:           Development
 
--- A longer description of the package.
--- description:
+homepage:           https://github.com/jiriklepl/NSWI164
+bug-reports:        https://github.com/jiriklepl/NSWI164/issues
 
--- A URL where users can report bugs.
--- bug-reports:
+license:            Apache-2.0
+license-file:       LICENSE
 
--- The license under which the package is released.
--- license:
-author:             jiriklepl
+author:             Jiří Klepl
 maintainer:         jiriklepl@seznam.cz
 
--- A copyright notice.
--- copyright:
--- category:
 extra-source-files:
     CHANGELOG.md
     README.md
+    LICENSE
+    NOTICE
+
+source-repository head
+  type:               git
+  location:           https://github.com/jiriklepl/NSWI164
 
 executable NSWI164
-    ghc-options:      -Wall
+    ghc-options:      -Wall -Wextra
     main-is:          Main.hs
     other-modules:    DSL.AST,
                       DSL.Parser,
@@ -35,12 +38,10 @@ executable NSWI164
                       LilyPond.Pretty,
                       NoteName,
                       NoteName.Pretty
-    extensions: Safe, LambdaCase, NamedFieldPuns
-    -- Modules included in this executable, other than Main.
-    -- other-modules:
 
-    -- LANGUAGE extensions used by modules in this package.
-    -- other-extensions:
+    default-extensions: Safe, LambdaCase, NamedFieldPuns
+    other-extensions: NoImplicitPrelude
+
     build-depends:
         base >=4.13.0.0 && <4.17,
         megaparsec ^>=9.0.1,

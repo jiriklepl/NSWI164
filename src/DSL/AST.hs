@@ -1,5 +1,3 @@
-{-# LANGUAGE Safe #-}
-
 module DSL.AST where
 
 import safe NoteName (NoteName)
