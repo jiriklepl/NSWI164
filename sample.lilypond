@@ -1,0 +1,22 @@
+\version "2.18.2"
+
+\header {
+  title = "AAA"
+}
+
+\score {
+  <<
+    \new Staff {
+      \key c \major
+      \time 4/4
+
+      \absolute {
+        b2 a''2 c,,8 e2 a''2 c,,8
+      }
+    }
+
+    \addlyrics {
+      "UU" "" "La" "Ta" "" "La"
+    }
+  >>
+}
