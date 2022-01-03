@@ -47,7 +47,7 @@ executable Graphs
 
     build-depends:
         base >=4.13.0.0 && <4.17,
-        template-haskell ^>=2.17,
+        template-haskell >=2.15 && <2.18,
         prettyprinter ^>=1.7.1,
         containers ^>=0.6.4.1,
 
@@ -74,4 +74,4 @@ executable Translator
         megaparsec ^>=9.0.1,
         containers ^>=0.6.4.1,
         prettyprinter ^>=1.7.1,
-        template-haskell ^>=2.17,
+        template-haskell >=2.15 && <2.18,
