@@ -1,3 +1,4 @@
+{-# LANGUAGE Safe #-}
 {-# OPTIONS_GHC -Wno-orphans #-}
 
 module NoteName.Pretty
@@ -8,8 +9,8 @@ import safe NoteName (NoteName(..))
 import safe Prettyprinter (Pretty(pretty))
 
 instance Pretty NoteName where
-  pretty = pretty .
-    \case
+  pretty =
+    pretty . \case
       A -> "a"
       B -> "b"
       C -> "c"

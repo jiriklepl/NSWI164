@@ -1,31 +1,46 @@
 cradle:
   cabal:
-    - path: "src/Main.hs"
-      component: "NSWI164:exe:NSWI164"
+    - path: "tools/Graphs/src/Graphs.hs"
+      component: "NSWI164:exe:Graphs"
 
-    - path: "src/DSL/AST.hs"
-      component: "NSWI164:exe:NSWI164"
+    - path: "tools/Graphs/src/DSL/AST.hs"
+      component: "NSWI164:exe:Graphs"
 
-    - path: "src/DSL/Parser.hs"
-      component: "NSWI164:exe:NSWI164"
+    - path: "tools/Graphs/src/LilyPond/AST.hs"
+      component: "NSWI164:exe:Graphs"
 
-    - path: "src/DSL/Parser/Token.hs"
-      component: "NSWI164:exe:NSWI164"
+    - path: "tools/Graphs/src/NoteName.hs"
+      component: "NSWI164:exe:Graphs"
 
-    - path: "src/DSL/Lexer.hs"
-      component: "NSWI164:exe:NSWI164"
+    - path: "tools/Graphs/src/Visualize.hs"
+      component: "NSWI164:exe:Graphs"
 
-    - path: "src/DSL2LilyPond/Translate.hs"
-      component: "NSWI164:exe:NSWI164"
+    - path: "./Main.hs"
+      component: "NSWI164:exe:Translator"
 
-    - path: "src/LilyPond/AST.hs"
-      component: "NSWI164:exe:NSWI164"
+    - path: "./DSL/AST.hs"
+      component: "NSWI164:exe:Translator"
 
-    - path: "src/LilyPond/Pretty.hs"
-      component: "NSWI164:exe:NSWI164"
+    - path: "./DSL/Parser.hs"
+      component: "NSWI164:exe:Translator"
 
-    - path: "src/NoteName.hs"
-      component: "NSWI164:exe:NSWI164"
+    - path: "./DSL/Parser/Token.hs"
+      component: "NSWI164:exe:Translator"
 
-    - path: "src/NoteName/Pretty.hs"
-      component: "NSWI164:exe:NSWI164"
+    - path: "./DSL/Lexer.hs"
+      component: "NSWI164:exe:Translator"
+
+    - path: "./DSL2LilyPond/Translate.hs"
+      component: "NSWI164:exe:Translator"
+
+    - path: "./LilyPond/AST.hs"
+      component: "NSWI164:exe:Translator"
+
+    - path: "./LilyPond/Pretty.hs"
+      component: "NSWI164:exe:Translator"
+
+    - path: "./NoteName.hs"
+      component: "NSWI164:exe:Translator"
+
+    - path: "./NoteName/Pretty.hs"
+      component: "NSWI164:exe:Translator"

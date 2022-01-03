@@ -1,3 +1,5 @@
+{-# LANGUAGE Safe #-}
+
 module DSL.Lexer
   ( tokens
   ) where

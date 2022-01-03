@@ -1,3 +1,5 @@
+{-# LANGUAGE Safe #-}
+
 module DSL2LilyPond.Translate where
 
 import safe qualified Data.Map as Map

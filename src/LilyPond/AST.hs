@@ -1,4 +1,8 @@
+{-# LANGUAGE Safe #-}
+
 module LilyPond.AST where
+
+import safe Data.Data (Data)
 
 import safe NoteName (NoteName)
 
@@ -8,22 +12,22 @@ data File =
     , header :: Header
     , score :: Score
     }
-  deriving (Show)
+  deriving (Show, Data)
 
 newtype Version =
   Version String
-  deriving (Show)
+  deriving (Show, Data)
 
 newtype Header =
   Header String
-  deriving (Show)
+  deriving (Show, Data)
 
 data Score =
   Score
     { staff :: Staff
     , lyrics :: Lyrics
     }
-  deriving (Show)
+  deriving (Show, Data)
 
 data Staff =
   Staff
@@ -31,29 +35,29 @@ data Staff =
     , time :: Time
     , absolute :: Absolute
     }
-  deriving (Show)
+  deriving (Show, Data)
 
 newtype Lyrics =
   Lyrics [String]
-  deriving (Show)
+  deriving (Show, Data)
 
 data Key =
   Key NoteName Scale
-  deriving (Show)
+  deriving (Show, Data)
 
 data Scale
   = Major
   | Minor
-  deriving (Show)
+  deriving (Show, Data)
 
 data Time =
   Time Int Int
-  deriving (Show)
+  deriving (Show, Data)
 
 newtype Absolute =
   Absolute [Note]
-  deriving (Show)
+  deriving (Show, Data)
 
 data Note =
   Note NoteName Int Int
-  deriving (Show)
+  deriving (Show, Data)

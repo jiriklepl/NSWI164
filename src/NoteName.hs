@@ -1,4 +1,8 @@
+{-# LANGUAGE Safe #-}
+
 module NoteName where
+
+import safe Data.Data (Data)
 
 data NoteName
   = A
@@ -8,4 +12,4 @@ data NoteName
   | E
   | F
   | G
-  deriving (Show)
+  deriving (Show, Data)
