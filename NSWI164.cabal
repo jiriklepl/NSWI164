@@ -28,7 +28,6 @@ source-repository head
 
 common options
     ghc-options:      -Wall -Wextra
-    hs-source-dirs:   src
 
     default-extensions: LambdaCase, NamedFieldPuns, DeriveDataTypeable
     default-language: Haskell2010
@@ -42,10 +41,9 @@ executable Graphs
                       NoteName,
                       Visualize
 
-    hs-source-dirs:   src,
-                      tools/Graphs/src
+    hs-source-dirs:   src, tools/Graphs/src
 
-    other-extensions:   NoImplicitPrelude, Safe, Trustworthy, TemplateHaskell, ScopedTypeVariables
+    other-extensions: NoImplicitPrelude, Safe, Trustworthy, TemplateHaskell, ScopedTypeVariables
 
     build-depends:
         base >=4.13.0.0 && <4.17,
@@ -68,7 +66,8 @@ executable Translator
                       NoteName,
                       NoteName.Pretty
 
-    other-extensions:   NoImplicitPrelude, Safe
+    other-extensions: NoImplicitPrelude, Safe
+    hs-source-dirs:   src
 
     build-depends:
         base >=4.13.0.0 && <4.17,
